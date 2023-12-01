@@ -33,7 +33,8 @@ BandDNBMGSWave = VIIRS[:750,31:33]
 AllBands = [BandM1Wave, BandM2Wave, BandM3Wave, BandM4Wave, BandM5Wave, BandM6Wave, BandM7Wave, BandI1Wave, BandI2Wave]
 
 # variables that can be changed:
-CUTOFF = 0.2 # to limit the bands to 0.5 so they dont go to 0
+HalfMax = 0.5
+CUTOFF = 0.5 # to limit the bands to 0.5 so they dont go to 0
 
 # get rid of all the ones below 0.5 bc they dont matter
 savex = np.empty(0, dtype = int)
@@ -43,6 +44,8 @@ for y in range(len(AllBands)):
             savex = np.append(savex,x)
     AllBands[y] = np.delete(AllBands[y],savex,0)
     savex = np.empty(0, dtype = int)
+
+
 
 # .............OPTION 1 ............
 # scale so average is 1 w/ integral
