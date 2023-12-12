@@ -3,7 +3,7 @@
 File reference:
 
 * FAnalysis_FPI_sample: Plot of FPI sample data
-* VIIRSanalysisFull: Sample Resonon data with VIIRS bands
+* VIIRSanalysis: Sample Resonon data with VIIRS bands
 
 
 when youve made a change on computer:
